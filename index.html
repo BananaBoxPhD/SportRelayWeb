@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--
+  SportRelay — coming soon holding page. Static, no JS, no build step.
+
+  BRAND
+  Ink navy      #0E1B2A
+  Signal orange #E8500A
+  Paper         #F6F4EE
+  Fonts (Google): Archivo Black (display) · Barlow Condensed 600-800 (labels) · Archivo (body)
+  Page: navy field, paper type, orange accents. Flat fills only — no gradients, no shadows.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SportRelay — Coming Soon</title>
+<meta name="description" content="SportRelay is a pitch-calling app for baseball coaches. Coming soon to iOS and Android.">
+<meta name="theme-color" content="#0E1B2A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1B2A;
+    --orange:#E8500A;
+    --paper:#F6F4EE;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:"Archivo",Helvetica,Arial,sans-serif;
+    min-height:100vh;
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    padding:24px 22px 22px;
+    line-height:1.45;
+  }
+  a{color:var(--orange);text-decoration:none;border-bottom:2px solid var(--orange)}
+  a:hover{color:var(--paper);border-bottom-color:var(--paper)}
+
+  main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:min(5vh,40px);
+    padding:min(6vh,56px) 0;
+  }
+  .lockup{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:min(4vw,28px);
+    width:100%;
+  }
+  .mark{
+    width:min(19vw,15vh,120px);
+    height:min(19vw,15vh,120px);
+    flex:none;
+    display:block;
+  }
+  .mark rect{fill:var(--paper)}
+  .mark circle{fill:var(--orange)}
+  .wordmark{
+    font-family:"Archivo Black",Helvetica,Arial,sans-serif;
+    font-size:min(11.4vw,13vh,104px);
+    letter-spacing:.02em;
+    line-height:1;
+    white-space:nowrap;
+  }
+  .wordmark .relay{color:var(--orange)}
+
+  .soon{
+    background:var(--orange);
+    color:var(--ink);
+    padding:.36em .9em .4em;
+    font-family:"Archivo Black",Helvetica,Arial,sans-serif;
+    font-size:min(6.4vw,7vh,44px);
+    letter-spacing:.06em;
+    line-height:1;
+    text-align:center;
+  }
+
+  footer{
+    border-top:3px solid var(--orange);
+    padding-top:14px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:8px 20px;
+    font-family:"Barlow Condensed",Helvetica,Arial,sans-serif;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-size:clamp(12.5px,3.3vw,14px);
+  }
+  footer .rights{color:#8C97A3;letter-spacing:.12em}
+
+  @media (min-width:760px){
+    body{padding:min(4vh,36px) 48px min(3vh,28px)}
+  }
+</style>
+</head>
+<body>
+
+  <main>
+    <div class="lockup">
+      <svg class="mark" viewBox="0 0 96 96" role="img" aria-label="SportRelay mark">
+        <rect x="12" y="62" width="38" height="15" rx="7.5"/>
+        <rect x="31" y="40" width="38" height="15" rx="7.5"/>
+        <circle cx="75" cy="26" r="9"/>
+      </svg>
+      <h1 class="wordmark">SPORT<span class="relay">RELAY</span></h1>
+    </div>
+    <p class="soon">COMING SOON</p>
+  </main>
+
+  <footer>
+    <p><a href="mailto:support@sportrelay.app">support@sportrelay.app</a></p>
+    <p class="rights">© 2026 NTTD LLC</p>
+  </footer>
+
+</body>
+</html>
